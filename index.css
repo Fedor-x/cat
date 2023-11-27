@@ -1,0 +1,59 @@
+body{
+text-transform: uppercase;
+font-size: 28px;
+font-weight: bold;
+font-family: Arial, Helvetica, sans-serif;
+color: #12943A;
+}
+.container{
+width: 700px;
+height: 700px;
+border: 10px solid black;
+}
+.animals{
+justify-content: center;
+}
+.inner{
+width: 50%;
+height: 50%;
+background: purple;
+background-image: url(cat.jpg);
+display: flex;
+align-items: center;
+justify-content: center;
+animation-name: move-circle;
+animation-duration: 900ms;
+animation-timing-function: ease;
+animation-fill-mode: forwards;
+animation-iteration-count: infinite;
+animation-direction: reverse;
+animation-delay: 3s;
+}
+.container:hover .inner{
+    animation-play-state: paused;
+
+}
+@keyframes move-circle {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(100%);
+        color: #FFF;
+        background: #000;
+    }
+    50% {
+        transform: translateX(100%) translateY(100%);
+        color: rgb(149, 213, 255);
+        background: rgb(43, 28, 255);
+    }
+    75%{
+        transform: translateX(0) translateY(100%);
+        color: pink;
+        background: red;
+    }
+
+100%{
+    transform: translateX(0) translateY(0);
+}
+}
